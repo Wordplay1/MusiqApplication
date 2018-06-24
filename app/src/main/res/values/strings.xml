@@ -1,0 +1,13 @@
+<resources>
+    <!-- Title for application. -->
+    <string name="app_name">Musiq Player</string>
+
+    <!-- Library string for activitymain.xml-->
+    <string name="library_main">My Library</string>
+
+    <!--Category names -->
+    <string name="category_songs">Songs</string>
+    <string name="category_albums">Albums</string>
+    <string name="category_artist">Artist</string>
+
+</resources>

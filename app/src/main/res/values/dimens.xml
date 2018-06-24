@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="library_photo_height">400dp</dimen>
+
+    <dimen name="icon_height">88dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activitty_vertical_margin">16dp</dimen>
+</resources>
