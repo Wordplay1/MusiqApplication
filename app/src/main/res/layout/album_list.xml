@@ -6,24 +6,27 @@
     android:minHeight="@dimen/icon_height"
     android:orientation="horizontal">
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/icon_height"
+        android:layout_height="@dimen/icon_height" />
 
     <LinearLayout
-        android:id="@+id/songs_container"
+        android:id="@+id/album_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="@dimen/activitty_vertical_margin">
 
         <TextView
-            android:id="@+id/song_text_view"
+            android:id="@+id/album_text_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
-            tools:text="Midnight Crusade" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/artist_text_view"
@@ -31,8 +34,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top"
-            android:textColor="@android:color/white"
-            tools:text="Dance Gavin Dance" />
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

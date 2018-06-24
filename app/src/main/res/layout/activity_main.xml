@@ -30,7 +30,6 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/library_photo_height"
         android:paddingBottom="8dp"
-        android:layout_weight="0"
         android:src="@drawable/librarymainphoto" />
 
     <LinearLayout
@@ -79,7 +78,6 @@
             android:layout_height="1dp"
             android:layout_gravity="center"
             android:background="@android:color/white" />
-
 
     </LinearLayout>
 
