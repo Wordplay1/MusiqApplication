@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AlbumAdapter extends ArrayAdapter<Songs> {
+public class ArtistAdapter extends ArrayAdapter<Songs> {
 
     //for logs
     private static final String LOG_TAG = AlbumAdapter.class.getSimpleName();
@@ -19,7 +19,7 @@ public class AlbumAdapter extends ArrayAdapter<Songs> {
     //background color of the view.
     private int mColorResourceId;
 
-    public AlbumAdapter(Activity context, ArrayList<Songs> songs, int colorResourceId){
+    public ArtistAdapter(Activity context, ArrayList<Songs> songs, int colorResourceId){
         super(context,0,songs);
         mColorResourceId = colorResourceId;
     }
@@ -39,22 +39,19 @@ public class AlbumAdapter extends ArrayAdapter<Songs> {
         if(listItemView == null){
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.album_list,parent,false);
         }
-        Songs currentAlbum = getItem(position);
+        Songs currentArtist = getItem(position);
 
         //set song name in text view
-        TextView albumTextView = (TextView) listItemView.findViewById(R.id.album_text_view);
-        albumTextView.setText(currentAlbum.getAlbumName());
+        TextView artistTextView = (TextView) listItemView.findViewById(R.id.album_text_view);
+        artistTextView.setText(currentArtist.getArtist());
 
-        //set artist in text view
-        TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
-        artistTextView.setText(currentAlbum.getArtist());
 
         //declare ImageView to set image
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);
 
         //if condition for if view contains image or not
-        if(currentAlbum.hasImage()){
-            iconView.setImageResource(currentAlbum.getResourceImageId());
+        if(currentArtist.hasImage()){
+            iconView.setImageResource(currentArtist.getResourceImageId());
             iconView.setVisibility(View.VISIBLE);
         }else{
             iconView.setVisibility(View.GONE);

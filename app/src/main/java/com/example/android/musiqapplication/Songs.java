@@ -1,5 +1,8 @@
 package com.example.android.musiqapplication;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 public class Songs {
 
     private String mArtist;
@@ -12,34 +15,38 @@ public class Songs {
 
     private static final int NO_IMAGE_PROVIDED = -1;
 
+    public Songs(String artist) {
+        mArtist = artist;
+    }
 
-    public Songs(String artist, String songName){
+    public Songs(String artist, String songName) {
         mArtist = artist;
         mSongName = songName;
     }
 
-    public Songs(String artist, String albumName, int imageResourceId){
+    public Songs(String artist, String albumName, int imageResourceId) {
         mArtist = artist;
         mAlbumName = albumName;
         mImageResourceId = imageResourceId;
     }
 
-    public String getArtist(){
+    public String getArtist() {
         return mArtist;
     }
 
-    public String getSongName(){
+    public String getSongName() {
         return mSongName;
     }
 
-    public String getAlbumName(){
+    public String getAlbumName() {
         return mAlbumName;
     }
-    public int getResourceImageId(){
+
+    public int getResourceImageId() {
         return mImageResourceId;
     }
 
-    public boolean hasImage(){
+    public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
