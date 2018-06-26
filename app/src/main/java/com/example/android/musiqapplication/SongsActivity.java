@@ -5,11 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -24,19 +22,19 @@ public class SongsActivity extends AppCompatActivity {
          */
         ArrayList<Songs> songs = new ArrayList<>();
 
-        songs.add(new Songs("Dance Gavin Dance","Midnight Crusade"));
-        songs.add(new Songs("Post Malone","I Fall Apart"));
-        songs.add(new Songs("David Axelrod","Holy Thursday"));
-        songs.add(new Songs("NAV","TTD"));
-        songs.add(new Songs("J Cole","ATM"));
-        songs.add(new Songs("A$AP Rocky","Bad Company"));
-        songs.add(new Songs("Jay Critch","Did it Again"));
-        songs.add(new Songs("Moby","Porcelain"));
-        songs.add(new Songs("Tupac","Changes"));
-        songs.add(new Songs("Lil Wayne","Right Above It"));
-        songs.add(new Songs("Bryson Tiller","Self Made"));
+        songs.add(new Songs("Dance Gavin Dance", "Midnight Crusade"));
+        songs.add(new Songs("Post Malone", "I Fall Apart"));
+        songs.add(new Songs("David Axelrod", "Holy Thursday"));
+        songs.add(new Songs("NAV", "TTD"));
+        songs.add(new Songs("J Cole", "ATM"));
+        songs.add(new Songs("A$AP Rocky", "Bad Company"));
+        songs.add(new Songs("Jay Critch", "Did it Again"));
+        songs.add(new Songs("Moby", "Porcelain"));
+        songs.add(new Songs("Tupac", "Changes"));
+        songs.add(new Songs("Lil Wayne", "Right Above It"));
+        songs.add(new Songs("Bryson Tiller", "Self Made"));
 
-        SongAdapter songAdapter = new SongAdapter(this,songs,R.color.category_color);
+        SongAdapter songAdapter = new SongAdapter(this, songs, R.color.category_color);
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(songAdapter);
@@ -47,13 +45,11 @@ public class SongsActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Songs song = new Songs(mSong.getText().toString(),mArtist.getText().toString());
-
+                Songs song = (Songs)(parent.getItemAtPosition(position));
                 Intent playIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
-
-                playIntent.putExtra("Songs",song);
+                playIntent.putExtra("Songs", song);
                 startActivity(playIntent);
             }
         });

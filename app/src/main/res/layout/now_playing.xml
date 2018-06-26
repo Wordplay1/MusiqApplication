@@ -3,37 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/category_color">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/activitty_vertical_margin">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Now Playing" />
+            android:text="Now Playing"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceLarge" />
     </LinearLayout>
 
 
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:src="@drawable/librarymainphoto" />
+        android:background="@android:color/darker_gray"
+        android:tint="@android:color/white"
+        android:src="@drawable/musicnote" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/song_playing_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
             tools:text="Songggg Playyyinnnnngg" />
 
         <TextView
@@ -41,6 +52,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
             tools:text="Artist" />
     </LinearLayout>
 
@@ -49,28 +62,35 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:clickable="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
 
         <ImageButton
             android:id="@+id/rewind_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/rewindbutton" />
+            android:src="@drawable/rewindbutton"
+            android:tint="@android:color/white"
+            android:background="@color/category_color"/>
 
         <ImageButton
             android:id="@+id/pause_play_button"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/playbutton" />
+            android:layout_weight="1"
+            android:src="@drawable/playbutton"
+            android:tint="@android:color/white"
+            android:background="@color/category_color"/>
 
         <ImageButton
             android:id="@+id/fast_forward_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/forwardbutton" />
+            android:src="@drawable/forwardbutton"
+            android:tint="@android:color/white"
+            android:background="@color/category_color"/>
 
     </LinearLayout>
 
