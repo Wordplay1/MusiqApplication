@@ -41,12 +41,19 @@ public class SongsActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(songAdapter);
 
+        final TextView mSong = (TextView) findViewById(R.id.song_text_view);
+        final TextView mArtist = (TextView) findViewById(R.id.artist_text_view);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
+
+                Songs song = new Songs(mSong.getText().toString(),mArtist.getText().toString());
+
                 Intent playIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
-                // The code in this method will be executed when the Play category is clicked on.
+
+                playIntent.putExtra("Songs",song);
                 startActivity(playIntent);
             }
         });

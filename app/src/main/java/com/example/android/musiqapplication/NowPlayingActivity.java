@@ -1,30 +1,27 @@
 package com.example.android.musiqapplication;
 
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageButton;
-
-import com.example.android.musiqapplication.R;
-import com.example.android.musiqapplication.Songs;
-
-import java.util.ArrayList;
+import android.widget.TextView;
 
 
 public class NowPlayingActivity extends AppCompatActivity {
 
-    MediaPlayer mp;
-
-    ImageButton play, pause,stop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.now_playing);
 
+        TextView mSongName = (TextView)findViewById(R.id.song_playing_textview);
+        TextView mArtist = (TextView)findViewById(R.id.artist_playing_textview);
 
+        Intent intent = getIntent();
+        Songs songs = intent.getParcelableExtra("Songs");
+
+        mSongName.setText(songs.getSongName());
+        mArtist.setText(songs.getArtist());
 
 
 
