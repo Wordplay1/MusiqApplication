@@ -1,8 +1,14 @@
 package com.example.android.musiqapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -33,5 +39,15 @@ public class SongsActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(songAdapter);
+
+        TextView layout = (TextView) findViewById(R.id.song_text_view);
+
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent songsIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
+                startActivity(songsIntent);
+            }
+        });
     }
 }
