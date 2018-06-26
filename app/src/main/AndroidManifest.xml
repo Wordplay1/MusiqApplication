@@ -27,7 +27,7 @@
             android:label="@string/category_artist"/>
         <activity
             android:name=".NowPlayingActivity"
-            android:label=""/>
+            android:label="NowPlaying"/>
     </application>
 
 </manifest>

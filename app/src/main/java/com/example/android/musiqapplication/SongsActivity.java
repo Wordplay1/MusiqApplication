@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -40,13 +41,13 @@ public class SongsActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(songAdapter);
 
-        TextView layout = (TextView) findViewById(R.id.song_text_view);
 
-        layout.setOnClickListener(new View.OnClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent songsIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
-                startActivity(songsIntent);
+            public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
+                Intent playIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
+                // The code in this method will be executed when the Play category is clicked on.
+                startActivity(playIntent);
             }
         });
     }
