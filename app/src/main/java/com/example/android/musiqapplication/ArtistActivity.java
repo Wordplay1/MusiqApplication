@@ -28,7 +28,7 @@ public class ArtistActivity extends AppCompatActivity {
 
         ArtistAdapter artistAdapter = new ArtistAdapter(this, songs, R.color.category_color);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
         listView.setAdapter(artistAdapter);
 
     }

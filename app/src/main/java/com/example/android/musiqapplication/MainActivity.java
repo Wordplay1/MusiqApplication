@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView songs = (TextView) findViewById(R.id.songs);
-        TextView albums = (TextView) findViewById(R.id.albums);
-        TextView artist = (TextView) findViewById(R.id.artist);
+        TextView songs = findViewById(R.id.songs);
+        TextView albums = findViewById(R.id.albums);
+        TextView artist = findViewById(R.id.artist);
 
         /**
          * clickListener for songs TextView

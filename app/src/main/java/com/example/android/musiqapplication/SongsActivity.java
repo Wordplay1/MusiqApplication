@@ -39,8 +39,8 @@ public class SongsActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(songAdapter);
 
-        final TextView mSong = (TextView) findViewById(R.id.song_text_view);
-        final TextView mArtist = (TextView) findViewById(R.id.artist_text_view);
+        final TextView mSong =  findViewById(R.id.song_text_view);
+        final TextView mArtist = findViewById(R.id.artist_text_view);
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

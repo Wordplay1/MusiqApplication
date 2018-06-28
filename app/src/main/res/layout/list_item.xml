@@ -22,8 +22,7 @@
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
-            tools:text="Midnight Crusade" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/artist_text_view"
@@ -31,8 +30,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top"
-            android:textColor="@android:color/white"
-            tools:text="Dance Gavin Dance" />
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

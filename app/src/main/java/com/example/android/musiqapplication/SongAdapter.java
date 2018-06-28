@@ -33,27 +33,27 @@ public class SongAdapter extends ArrayAdapter<Songs> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        View listItemView = convertView;
 
-        if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
+
+        if(null == convertView){
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
         }
         Songs currentSong = getItem(position);
 
         //set song name in text view
-        TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
+        TextView songTextView = convertView.findViewById(R.id.song_text_view);
         songTextView.setText(currentSong.getSongName());
 
         //set artist in text view
-        TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
+        TextView artistTextView = convertView.findViewById(R.id.artist_text_view);
         artistTextView.setText(currentSong.getArtist());
 
-        View songContainer = listItemView.findViewById(R.id.songs_container);
+        View songContainer = convertView.findViewById(R.id.songs_container);
 
         int color = ContextCompat.getColor(getContext(),mColorResourceId);
 
         songContainer.setBackgroundColor(color);
 
-        return listItemView;
+        return convertView;
     }
 }

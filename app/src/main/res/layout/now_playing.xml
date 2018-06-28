@@ -44,8 +44,7 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:text="Songggg Playyyinnnnngg" />
+            android:textAppearance="?android:textAppearanceMedium" />
 
         <TextView
             android:id="@+id/artist_playing_textview"
@@ -53,8 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@android:color/white"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:text="Artist" />
+            android:textAppearance="?android:textAppearanceMedium" />
     </LinearLayout>
 
     <LinearLayout

@@ -34,23 +34,23 @@ public class AlbumAdapter extends ArrayAdapter<Songs> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        View listItemView = convertView;
 
-        if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.album_list,parent,false);
+
+        if(null == convertView){
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.album_list,parent,false);
         }
         Songs currentAlbum = getItem(position);
 
         //set song name in text view
-        TextView albumTextView = (TextView) listItemView.findViewById(R.id.album_text_view);
+        TextView albumTextView = convertView.findViewById(R.id.album_text_view);
         albumTextView.setText(currentAlbum.getAlbumName());
 
         //set artist in text view
-        TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
+        TextView artistTextView = convertView.findViewById(R.id.artist_text_view);
         artistTextView.setText(currentAlbum.getArtist());
 
         //declare ImageView to set image
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);
+        ImageView iconView = convertView.findViewById(R.id.image);
 
         //if condition for if view contains image or not
         if(currentAlbum.hasImage()){
@@ -61,12 +61,12 @@ public class AlbumAdapter extends ArrayAdapter<Songs> {
         }
 
 
-        View songContainer = listItemView.findViewById(R.id.album_container);
+        View songContainer = convertView.findViewById(R.id.album_container);
 
         int color = ContextCompat.getColor(getContext(),mColorResourceId);
 
         songContainer.setBackgroundColor(color);
 
-        return listItemView;
+        return convertView;
     }
 }

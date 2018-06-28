@@ -28,7 +28,7 @@ public class AlbumActivity extends AppCompatActivity {
 
         AlbumAdapter albumAdapter = new AlbumAdapter(this,songs,R.color.category_color);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
         listView.setAdapter(albumAdapter);
     }
 }
